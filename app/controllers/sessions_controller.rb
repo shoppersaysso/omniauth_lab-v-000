@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(params[:id])
+    @user = User.find_or_create(params[:name])
   end
 
 
